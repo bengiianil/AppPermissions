@@ -17,6 +17,13 @@
 		36A9FCAC2703313E008CA2E2 /* AppPermissionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A9FCAB2703313E008CA2E2 /* AppPermissionsTests.swift */; };
 		36A9FCB62703313E008CA2E2 /* AppPermissionsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A9FCB52703313E008CA2E2 /* AppPermissionsUITests.swift */; };
 		36A9FCB82703313E008CA2E2 /* AppPermissionsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A9FCB72703313E008CA2E2 /* AppPermissionsUITestsLaunchTests.swift */; };
+		36A9FCD1270365BD008CA2E2 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A9FCD0270365BD008CA2E2 /* ActionButton.swift */; };
+		36A9FCD427037EDA008CA2E2 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A9FCD327037EDA008CA2E2 /* BaseView.swift */; };
+		36A9FCD8270390D0008CA2E2 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A9FCD7270390D0008CA2E2 /* FontManager.swift */; };
+		36A9FCDA27039167008CA2E2 /* GenericValueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A9FCD927039167008CA2E2 /* GenericValueProtocol.swift */; };
+		36A9FCDC27039B9E008CA2E2 /* ActionButtonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A9FCDB27039B9E008CA2E2 /* ActionButtonData.swift */; };
+		36A9FCDE27039FC5008CA2E2 /* ActionButtonTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A9FCDD27039FC5008CA2E2 /* ActionButtonTheme.swift */; };
+		36A9FCE027039FCD008CA2E2 /* ActionButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A9FCDF27039FCD008CA2E2 /* ActionButtonType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +58,13 @@
 		36A9FCB12703313E008CA2E2 /* AppPermissionsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppPermissionsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36A9FCB52703313E008CA2E2 /* AppPermissionsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPermissionsUITests.swift; sourceTree = "<group>"; };
 		36A9FCB72703313E008CA2E2 /* AppPermissionsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPermissionsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		36A9FCD0270365BD008CA2E2 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		36A9FCD327037EDA008CA2E2 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		36A9FCD7270390D0008CA2E2 /* FontManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
+		36A9FCD927039167008CA2E2 /* GenericValueProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericValueProtocol.swift; sourceTree = "<group>"; };
+		36A9FCDB27039B9E008CA2E2 /* ActionButtonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonData.swift; sourceTree = "<group>"; };
+		36A9FCDD27039FC5008CA2E2 /* ActionButtonTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonTheme.swift; sourceTree = "<group>"; };
+		36A9FCDF27039FCD008CA2E2 /* ActionButtonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +115,9 @@
 		36A9FC902703313E008CA2E2 /* AppPermissions */ = {
 			isa = PBXGroup;
 			children = (
+				36A9FCD5270390A3008CA2E2 /* Utils */,
+				36A9FCD227037EC0008CA2E2 /* BaseComponent */,
+				36A9FCCD27036567008CA2E2 /* Components */,
 				36A9FC912703313E008CA2E2 /* AppDelegate.swift */,
 				36A9FC932703313E008CA2E2 /* SceneDelegate.swift */,
 				36A9FC952703313E008CA2E2 /* ViewController.swift */,
@@ -128,6 +145,50 @@
 				36A9FCB72703313E008CA2E2 /* AppPermissionsUITestsLaunchTests.swift */,
 			);
 			path = AppPermissionsUITests;
+			sourceTree = "<group>";
+		};
+		36A9FCCD27036567008CA2E2 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				36A9FCCE2703658C008CA2E2 /* ActionButtonComponent */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		36A9FCCE2703658C008CA2E2 /* ActionButtonComponent */ = {
+			isa = PBXGroup;
+			children = (
+				36A9FCD0270365BD008CA2E2 /* ActionButton.swift */,
+				36A9FCDB27039B9E008CA2E2 /* ActionButtonData.swift */,
+				36A9FCDD27039FC5008CA2E2 /* ActionButtonTheme.swift */,
+				36A9FCDF27039FCD008CA2E2 /* ActionButtonType.swift */,
+			);
+			path = ActionButtonComponent;
+			sourceTree = "<group>";
+		};
+		36A9FCD227037EC0008CA2E2 /* BaseComponent */ = {
+			isa = PBXGroup;
+			children = (
+				36A9FCD327037EDA008CA2E2 /* BaseView.swift */,
+				36A9FCD927039167008CA2E2 /* GenericValueProtocol.swift */,
+			);
+			path = BaseComponent;
+			sourceTree = "<group>";
+		};
+		36A9FCD5270390A3008CA2E2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				36A9FCD6270390AD008CA2E2 /* FontManagers */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		36A9FCD6270390AD008CA2E2 /* FontManagers */ = {
+			isa = PBXGroup;
+			children = (
+				36A9FCD7270390D0008CA2E2 /* FontManager.swift */,
+			);
+			path = FontManagers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,10 +322,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36A9FCE027039FCD008CA2E2 /* ActionButtonType.swift in Sources */,
 				36A9FC9C2703313E008CA2E2 /* AppPermissions.xcdatamodeld in Sources */,
+				36A9FCDE27039FC5008CA2E2 /* ActionButtonTheme.swift in Sources */,
+				36A9FCDA27039167008CA2E2 /* GenericValueProtocol.swift in Sources */,
 				36A9FC962703313E008CA2E2 /* ViewController.swift in Sources */,
+				36A9FCDC27039B9E008CA2E2 /* ActionButtonData.swift in Sources */,
+				36A9FCD8270390D0008CA2E2 /* FontManager.swift in Sources */,
 				36A9FC922703313E008CA2E2 /* AppDelegate.swift in Sources */,
+				36A9FCD427037EDA008CA2E2 /* BaseView.swift in Sources */,
 				36A9FC942703313E008CA2E2 /* SceneDelegate.swift in Sources */,
+				36A9FCD1270365BD008CA2E2 /* ActionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
