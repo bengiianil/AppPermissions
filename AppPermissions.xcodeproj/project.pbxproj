@@ -13,6 +13,10 @@
 		368E29932706046700ED8CFB /* ActionModuleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368E29922706046700ED8CFB /* ActionModuleData.swift */; };
 		368E299627061C4800ED8CFB /* LabelComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368E299527061C4800ED8CFB /* LabelComponent.swift */; };
 		368E299827061C6900ED8CFB /* LabelComponentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368E299727061C6900ED8CFB /* LabelComponentData.swift */; };
+		368E299B27063CF000ED8CFB /* PermissionMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368E299A27063CF000ED8CFB /* PermissionMainView.swift */; };
+		368E299D27063DD500ED8CFB /* PermissionMainViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368E299C27063DD500ED8CFB /* PermissionMainViewData.swift */; };
+		368E29A327064CDD00ED8CFB /* PermissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368E29A227064CDD00ED8CFB /* PermissionViewController.swift */; };
+		368E29A82706515A00ED8CFB /* PermissionImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368E29A72706515A00ED8CFB /* PermissionImages.swift */; };
 		36A9FC922703313E008CA2E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A9FC912703313E008CA2E2 /* AppDelegate.swift */; };
 		36A9FC942703313E008CA2E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A9FC932703313E008CA2E2 /* SceneDelegate.swift */; };
 		36A9FC962703313E008CA2E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A9FC952703313E008CA2E2 /* ViewController.swift */; };
@@ -56,6 +60,10 @@
 		368E29922706046700ED8CFB /* ActionModuleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionModuleData.swift; sourceTree = "<group>"; };
 		368E299527061C4800ED8CFB /* LabelComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelComponent.swift; sourceTree = "<group>"; };
 		368E299727061C6900ED8CFB /* LabelComponentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelComponentData.swift; sourceTree = "<group>"; };
+		368E299A27063CF000ED8CFB /* PermissionMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionMainView.swift; sourceTree = "<group>"; };
+		368E299C27063DD500ED8CFB /* PermissionMainViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionMainViewData.swift; sourceTree = "<group>"; };
+		368E29A227064CDD00ED8CFB /* PermissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionViewController.swift; sourceTree = "<group>"; };
+		368E29A72706515A00ED8CFB /* PermissionImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionImages.swift; sourceTree = "<group>"; };
 		36A9FC8E2703313E008CA2E2 /* AppPermissions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppPermissions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36A9FC912703313E008CA2E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36A9FC932703313E008CA2E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +138,56 @@
 			path = LabelPackComponent;
 			sourceTree = "<group>";
 		};
+		368E299927063CA800ED8CFB /* PermissionComponents */ = {
+			isa = PBXGroup;
+			children = (
+				368E299A27063CF000ED8CFB /* PermissionMainView.swift */,
+				368E299C27063DD500ED8CFB /* PermissionMainViewData.swift */,
+			);
+			path = PermissionComponents;
+			sourceTree = "<group>";
+		};
+		368E299E27064C2200ED8CFB /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				368E29A127064C6300ED8CFB /* Permissions */,
+				368E299F27064C4E00ED8CFB /* Main */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		368E299F27064C4E00ED8CFB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				36A9FC952703313E008CA2E2 /* ViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		368E29A127064C6300ED8CFB /* Permissions */ = {
+			isa = PBXGroup;
+			children = (
+				368E29A227064CDD00ED8CFB /* PermissionViewController.swift */,
+			);
+			path = Permissions;
+			sourceTree = "<group>";
+		};
+		368E29A62706514A00ED8CFB /* AssetHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				368E29A92706519400ED8CFB /* PermissionImages */,
+			);
+			path = AssetHelpers;
+			sourceTree = "<group>";
+		};
+		368E29A92706519400ED8CFB /* PermissionImages */ = {
+			isa = PBXGroup;
+			children = (
+				368E29A72706515A00ED8CFB /* PermissionImages.swift */,
+			);
+			path = PermissionImages;
+			sourceTree = "<group>";
+		};
 		36A9FC852703313E008CA2E2 = {
 			isa = PBXGroup;
 			children = (
@@ -153,12 +211,12 @@
 		36A9FC902703313E008CA2E2 /* AppPermissions */ = {
 			isa = PBXGroup;
 			children = (
-				36A9FCD5270390A3008CA2E2 /* Utils */,
-				36A9FCD227037EC0008CA2E2 /* BaseComponent */,
+				36A9FCD227037EC0008CA2E2 /* BaseComponents */,
 				36A9FCCD27036567008CA2E2 /* Components */,
+				36A9FCD5270390A3008CA2E2 /* Utilities */,
+				368E299E27064C2200ED8CFB /* Scenes */,
 				36A9FC912703313E008CA2E2 /* AppDelegate.swift */,
 				36A9FC932703313E008CA2E2 /* SceneDelegate.swift */,
-				36A9FC952703313E008CA2E2 /* ViewController.swift */,
 				36A9FC972703313E008CA2E2 /* Main.storyboard */,
 				36A9FC9D2703313E008CA2E2 /* Assets.xcassets */,
 				36A9FC9F2703313E008CA2E2 /* LaunchScreen.storyboard */,
@@ -188,6 +246,7 @@
 		36A9FCCD27036567008CA2E2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				368E299927063CA800ED8CFB /* PermissionComponents */,
 				36A9FCCE2703658C008CA2E2 /* ActionButtonComponent */,
 				368E298F270603C100ED8CFB /* ActionModuleComponent */,
 				368E299427061C0B00ED8CFB /* LabelPackComponent */,
@@ -206,23 +265,24 @@
 			path = ActionButtonComponent;
 			sourceTree = "<group>";
 		};
-		36A9FCD227037EC0008CA2E2 /* BaseComponent */ = {
+		36A9FCD227037EC0008CA2E2 /* BaseComponents */ = {
 			isa = PBXGroup;
 			children = (
 				36A9FCD327037EDA008CA2E2 /* BaseView.swift */,
 				36A9FCD927039167008CA2E2 /* GenericValueProtocol.swift */,
 				3639CD1A2704CDA30061847A /* GenericBaseView.swift */,
 			);
-			path = BaseComponent;
+			path = BaseComponents;
 			sourceTree = "<group>";
 		};
-		36A9FCD5270390A3008CA2E2 /* Utils */ = {
+		36A9FCD5270390A3008CA2E2 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				368E29A62706514A00ED8CFB /* AssetHelpers */,
 				3639CD1C2704E7B80061847A /* Extentions */,
 				36A9FCD6270390AD008CA2E2 /* FontManagers */,
 			);
-			path = Utils;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		36A9FCD6270390AD008CA2E2 /* FontManagers */ = {
@@ -364,19 +424,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				368E299D27063DD500ED8CFB /* PermissionMainViewData.swift in Sources */,
 				36A9FCE027039FCD008CA2E2 /* ActionButtonType.swift in Sources */,
 				36A9FC9C2703313E008CA2E2 /* AppPermissions.xcdatamodeld in Sources */,
 				368E299627061C4800ED8CFB /* LabelComponent.swift in Sources */,
+				368E29A82706515A00ED8CFB /* PermissionImages.swift in Sources */,
 				36A9FCDE27039FC5008CA2E2 /* ActionButtonTheme.swift in Sources */,
 				368E29932706046700ED8CFB /* ActionModuleData.swift in Sources */,
 				36A9FCDA27039167008CA2E2 /* GenericValueProtocol.swift in Sources */,
 				36A9FC962703313E008CA2E2 /* ViewController.swift in Sources */,
 				36A9FCDC27039B9E008CA2E2 /* ActionButtonData.swift in Sources */,
+				368E29A327064CDD00ED8CFB /* PermissionViewController.swift in Sources */,
 				36A9FCD8270390D0008CA2E2 /* FontManager.swift in Sources */,
 				368E299827061C6900ED8CFB /* LabelComponentData.swift in Sources */,
 				36A9FC922703313E008CA2E2 /* AppDelegate.swift in Sources */,
 				3639CD1E2704E7CB0061847A /* UIView+Extentions.swift in Sources */,
 				368E2991270603DD00ED8CFB /* ActionModule.swift in Sources */,
+				368E299B27063CF000ED8CFB /* PermissionMainView.swift in Sources */,
 				36A9FCD427037EDA008CA2E2 /* BaseView.swift in Sources */,
 				36A9FC942703313E008CA2E2 /* SceneDelegate.swift in Sources */,
 				36A9FCD1270365BD008CA2E2 /* ActionButton.swift in Sources */,
