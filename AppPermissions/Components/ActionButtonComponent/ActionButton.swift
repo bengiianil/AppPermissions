@@ -7,7 +7,14 @@
 
 import UIKit
 
+// The aim of using delegate is to inform someone who delegates to me
+protocol ActionButtonDelegate: AnyObject {
+    func actionButtonPressed()
+}
+
 class ActionButton: GenericBaseView<ActionButtonData> {
+    
+    weak var delegate: ActionButtonDelegate?
         
     private lazy var shadowContainer: UIView = {
         
@@ -86,6 +93,7 @@ class ActionButton: GenericBaseView<ActionButtonData> {
         ])
     }
     
+    // After GenericBaseView, we overrrided the data via loadDataView function
     override func loadDataView() {
         
         super.loadDataView()
@@ -107,25 +115,12 @@ class ActionButton: GenericBaseView<ActionButtonData> {
             infoTitle.textColor = theme.value
         }
     }
-    /**
-     After GenericBaseView, we overrrided the data via loadDataView function
-     
-     func loadData() {
-         infoTitle.text = data.buttonText
-         
-         switch data.buttonType {
-             
-         case .filled(let theme):
-             containerView.backgroundColor = theme.value
-             infoTitle.textColor = .white
-         case .outlined(let theme):
-             containerView.backgroundColor = .white
-             containerView.layer.borderWidth = 1
-             containerView.layer.borderColor = theme.value.cgColor
-             infoTitle.textColor = theme.value
-         }
-     }
-     */
+   
+    private func pressedButtonAction() {
+        
+        guard let data = returnData() else{ return }
+        data.actionButtonListener?()
+    }
 }
 
 // To make a clickable button, write an extension
@@ -144,7 +139,19 @@ extension ActionButton: UIGestureRecognizerDelegate {
     }
     
     @objc fileprivate func buttonTapped(_ sender: UIGestureRecognizer) {
-        print("Tap function is worked.")
+        
+        // To prevent the user from pressing repeatedly before the animation ends
+        isUserInteractionEnabled = false
+        
+        startTappedAnimation { finish in
+            
+            if finish {
+                
+                self.isUserInteractionEnabled = true
+                self.delegate?.actionButtonPressed()
+                self.pressedButtonAction()
+            }
+        }
     }
 }
 

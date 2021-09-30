@@ -36,13 +36,11 @@ class GenericBaseView<T>: BaseView {
     
     // If we dont give a data, set the data with method injection
     func setData(by value: T?) {
-        
         self.data = value
         loadDataView()
     }
     
     func returnData() -> T? {
-        
         return data
     }
 }
