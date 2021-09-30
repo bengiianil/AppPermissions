@@ -11,6 +11,8 @@
 		3639CD1E2704E7CB0061847A /* UIView+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3639CD1D2704E7CB0061847A /* UIView+Extentions.swift */; };
 		368E2991270603DD00ED8CFB /* ActionModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368E2990270603DD00ED8CFB /* ActionModule.swift */; };
 		368E29932706046700ED8CFB /* ActionModuleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368E29922706046700ED8CFB /* ActionModuleData.swift */; };
+		368E299627061C4800ED8CFB /* LabelComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368E299527061C4800ED8CFB /* LabelComponent.swift */; };
+		368E299827061C6900ED8CFB /* LabelComponentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368E299727061C6900ED8CFB /* LabelComponentData.swift */; };
 		36A9FC922703313E008CA2E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A9FC912703313E008CA2E2 /* AppDelegate.swift */; };
 		36A9FC942703313E008CA2E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A9FC932703313E008CA2E2 /* SceneDelegate.swift */; };
 		36A9FC962703313E008CA2E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A9FC952703313E008CA2E2 /* ViewController.swift */; };
@@ -52,6 +54,8 @@
 		3639CD1D2704E7CB0061847A /* UIView+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extentions.swift"; sourceTree = "<group>"; };
 		368E2990270603DD00ED8CFB /* ActionModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionModule.swift; sourceTree = "<group>"; };
 		368E29922706046700ED8CFB /* ActionModuleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionModuleData.swift; sourceTree = "<group>"; };
+		368E299527061C4800ED8CFB /* LabelComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelComponent.swift; sourceTree = "<group>"; };
+		368E299727061C6900ED8CFB /* LabelComponentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelComponentData.swift; sourceTree = "<group>"; };
 		36A9FC8E2703313E008CA2E2 /* AppPermissions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppPermissions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36A9FC912703313E008CA2E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		36A9FC932703313E008CA2E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +121,15 @@
 			path = ActionModuleComponent;
 			sourceTree = "<group>";
 		};
+		368E299427061C0B00ED8CFB /* LabelPackComponent */ = {
+			isa = PBXGroup;
+			children = (
+				368E299527061C4800ED8CFB /* LabelComponent.swift */,
+				368E299727061C6900ED8CFB /* LabelComponentData.swift */,
+			);
+			path = LabelPackComponent;
+			sourceTree = "<group>";
+		};
 		36A9FC852703313E008CA2E2 = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +190,7 @@
 			children = (
 				36A9FCCE2703658C008CA2E2 /* ActionButtonComponent */,
 				368E298F270603C100ED8CFB /* ActionModuleComponent */,
+				368E299427061C0B00ED8CFB /* LabelPackComponent */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -352,12 +366,14 @@
 			files = (
 				36A9FCE027039FCD008CA2E2 /* ActionButtonType.swift in Sources */,
 				36A9FC9C2703313E008CA2E2 /* AppPermissions.xcdatamodeld in Sources */,
+				368E299627061C4800ED8CFB /* LabelComponent.swift in Sources */,
 				36A9FCDE27039FC5008CA2E2 /* ActionButtonTheme.swift in Sources */,
 				368E29932706046700ED8CFB /* ActionModuleData.swift in Sources */,
 				36A9FCDA27039167008CA2E2 /* GenericValueProtocol.swift in Sources */,
 				36A9FC962703313E008CA2E2 /* ViewController.swift in Sources */,
 				36A9FCDC27039B9E008CA2E2 /* ActionButtonData.swift in Sources */,
 				36A9FCD8270390D0008CA2E2 /* FontManager.swift in Sources */,
+				368E299827061C6900ED8CFB /* LabelComponentData.swift in Sources */,
 				36A9FC922703313E008CA2E2 /* AppDelegate.swift in Sources */,
 				3639CD1E2704E7CB0061847A /* UIView+Extentions.swift in Sources */,
 				368E2991270603DD00ED8CFB /* ActionModule.swift in Sources */,
