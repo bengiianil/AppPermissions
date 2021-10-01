@@ -9,8 +9,16 @@ import UIKit
 
 class PermissionViewController: UIViewController {
 
-    private var permissionMainView: PermissionMainView!
+    private var viewModel: PermissionViewModel!
     
+    private var permissionMainView: PermissionMainView!
+    // public var permissionMainViewData: PermissionMainViewData!
+    
+    convenience init(viewModel: PermissionViewModel) {
+        self.init()
+        self.viewModel = viewModel
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         addPermissionMainView()
@@ -18,7 +26,9 @@ class PermissionViewController: UIViewController {
     
     func addPermissionMainView() {
         
-        permissionMainView = PermissionMainView(data: getPermissionMainViewData())
+        // permissionMainView = PermissionMainView(data: getPermissionMainViewData())
+        permissionMainView = PermissionMainView(data: viewModel.getPermissionMainViewData())
+
         permissionMainView.translatesAutoresizingMaskIntoConstraints = false
         
         view.addSubview(permissionMainView)
@@ -31,9 +41,10 @@ class PermissionViewController: UIViewController {
         ])
     }
     
+    /**
     private func getPermissionMainViewData() -> PermissionMainViewData {
-        
-        return PermissionMainViewData(image: PermissionImages.camera.value, labelData: LabelComponentData(title: "Camera Permission", subtitle: "Would you please give permission to access your camera"), actionModuleData: ActionModuleData(negativeButtonData: ActionButtonData(buttonText: "Not Now", buttonType: .outlined(.smooth)), positiveButtonData: ActionButtonData(buttonText: "OK", buttonType: .filled(.smooth))))
+        return PermissionMainViewData(image: PermissionImages.camera.value, labelData: LabelComponentData(title: "Camera Permission", subtitle: "Would you please give permission to access your camera."), actionModuleData: ActionModuleData(negativeButtonData: ActionButtonData(buttonText: "Not Now", buttonType: .outlined(.smooth)), positiveButtonData: ActionButtonData(buttonText: "OK", buttonType: .filled(.smooth))))
     }
+    */
 }
 //

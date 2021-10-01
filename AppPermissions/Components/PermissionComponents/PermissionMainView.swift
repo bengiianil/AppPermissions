@@ -56,6 +56,11 @@ class PermissionMainView: GenericBaseView<PermissionMainViewData>{
         addInterfaceComponents()
     }
     
+    override func setupViewConfigurations() {
+        super.setupViewConfigurations()
+        setupContainerViewLayers()
+    }
+    
     private func addInterfaceComponents() {
         
         addSubview(containerView)
@@ -68,11 +73,17 @@ class PermissionMainView: GenericBaseView<PermissionMainViewData>{
             containerView.topAnchor.constraint(equalTo: topAnchor),
             containerView.bottomAnchor.constraint(equalTo: bottomAnchor),
             
-            mainStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 10),
-            mainStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -10),
-            mainStackView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 10),
-            mainStackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -10),
+            mainStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+            mainStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+            mainStackView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 40),
+            mainStackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -60),
         ])
+    }
+    
+    private func setupContainerViewLayers() {
+        
+        containerView.layer.cornerRadius = 10
+        containerView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
     }
     
     override func loadDataView() {

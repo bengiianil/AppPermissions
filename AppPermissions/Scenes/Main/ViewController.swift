@@ -16,19 +16,50 @@ class ViewController: UIViewController {
     private var actionModule: ActionModule!
     
     @IBAction func cameraButtonTapped(_ sender: Any) {
+        
         print("Camera Button Tapped.")
+        
+        present(PermissionViewBuilder.build(with: .camera), animated: true, completion: nil)
+        
+        /**
+        let permissionViewController = PermissionViewController()
+        
+        let data = PermissionMainViewData(image: PermissionImages.camera.value, labelData: LabelComponentData(title: "Camera Permission", subtitle: "Would you please give permission to access your camera."), actionModuleData: ActionModuleData(negativeButtonData: ActionButtonData(buttonText: "Not Now", buttonType: .outlined(.smooth)), positiveButtonData: ActionButtonData(buttonText: "OK", buttonType: .filled(.smooth))))
+        
+        permissionViewController.permissionMainViewData = data
+        
+        present(permissionViewController, animated: true) {
+            print("PermissionViewController is presented.")
+        }
+         */
     }
     @IBAction func photosButtonTapped(_ sender: Any) {
         print("Photos Button Tapped.")
+        
+        present(PermissionViewBuilder.build(with: .photos), animated: true, completion: nil)
+        
+        /**
+        let permissionViewController = PermissionViewController()
+        
+        let data = PermissionMainViewData(image: PermissionImages.photos.value, labelData: LabelComponentData(title: "Photos Permission", subtitle: "Would you please give permission to access your photos."), actionModuleData: ActionModuleData(negativeButtonData: ActionButtonData(buttonText: "Not Now", buttonType: .outlined(.bright)), positiveButtonData: ActionButtonData(buttonText: "OK", buttonType: .filled(.bright))))
+        
+        permissionViewController.permissionMainViewData = data
+        
+        present(permissionViewController, animated: true) {
+            print("PermissionViewController is presented.")
+        }
+        */
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // After the permissionViewController, we dont need these codes
+        
         // At the time of viewDidLoad() execution, call addActionButton() function
-        addActionButton()
-        addActionModule()
-        setupActionModuleData()
+       //  addActionButton()
+       //  addActionModule()
+       //  setupActionModuleData()
         
         // If init time, there is no data, we added the data via setData with 3 sec delay
         /**
@@ -42,6 +73,9 @@ class ViewController: UIViewController {
         // test(completion: testHandler)
     }
     
+    
+    /**
+
     lazy var testHandler: BooleanCompletionBlock = { value in
         print("value: \(value)")
     }
@@ -109,6 +143,7 @@ class ViewController: UIViewController {
             completion(true)
         }
     }
+     */
 }
 
 /**
