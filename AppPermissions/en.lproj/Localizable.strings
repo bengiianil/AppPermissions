@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  AppPermissions
+
+  Created by Bengi on 1.10.2021.
+  
+*/
+
+"cameraPermissionTitle" = "Camera Permission";
+"cameraPermissionSubTitle" = "Would you please give permission to access your camera.";
+
+"photosPermissionTitle" = "Photos Permission";
+"photosPermissionSubTitle" = "Would you please give permission to access your photos.";
+
+"permissionOk" = "OK";
+"permissionNotNow" = "Not Now";

@@ -13,6 +13,9 @@
 		3631897A2707567E0047C41A /* CameraPermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363189792707567E0047C41A /* CameraPermissionManager.swift */; };
 		3631897E270757070047C41A /* PhotosPermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3631897D270757070047C41A /* PhotosPermissionManager.swift */; };
 		3631898127075C230047C41A /* PermissionViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3631898027075C230047C41A /* PermissionViewFactory.swift */; };
+		3631898427076FBA0047C41A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3631898627076FBA0047C41A /* Localizable.strings */; };
+		3631898B270771130047C41A /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3631898A270771130047C41A /* String+Extensions.swift */; };
+		3631898E270772630047C41A /* PermissionLocalizables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3631898D270772630047C41A /* PermissionLocalizables.swift */; };
 		3639CD1B2704CDA30061847A /* GenericBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3639CD1A2704CDA30061847A /* GenericBaseView.swift */; };
 		3639CD1E2704E7CB0061847A /* UIView+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3639CD1D2704E7CB0061847A /* UIView+Extentions.swift */; };
 		368E2991270603DD00ED8CFB /* ActionModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368E2990270603DD00ED8CFB /* ActionModule.swift */; };
@@ -66,6 +69,12 @@
 		363189792707567E0047C41A /* CameraPermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPermissionManager.swift; sourceTree = "<group>"; };
 		3631897D270757070047C41A /* PhotosPermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosPermissionManager.swift; sourceTree = "<group>"; };
 		3631898027075C230047C41A /* PermissionViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionViewFactory.swift; sourceTree = "<group>"; };
+		3631898527076FBA0047C41A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3631898727076FE20047C41A /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Main.strings; sourceTree = "<group>"; };
+		3631898827076FE20047C41A /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		3631898927076FE20047C41A /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3631898A270771130047C41A /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		3631898D270772630047C41A /* PermissionLocalizables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionLocalizables.swift; sourceTree = "<group>"; };
 		3639CD1A2704CDA30061847A /* GenericBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericBaseView.swift; sourceTree = "<group>"; };
 		3639CD1D2704E7CB0061847A /* UIView+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extentions.swift"; sourceTree = "<group>"; };
 		368E2990270603DD00ED8CFB /* ActionModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionModule.swift; sourceTree = "<group>"; };
@@ -127,20 +136,12 @@
 		3631897027074F100047C41A /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				3631897F27075C080047C41A /* PermissionViewFactory */,
-				3631897127074F180047C41A /* PermissionManagers */,
-			);
-			path = Managers;
-			sourceTree = "<group>";
-		};
-		3631897127074F180047C41A /* PermissionManagers */ = {
-			isa = PBXGroup;
-			children = (
 				363189782707566E0047C41A /* CameraPermissionManager */,
 				3631897B270756BA0047C41A /* PermissionProtocols */,
+				3631897F27075C080047C41A /* PermissionViewFactory */,
 				3631897C270756E70047C41A /* PhotosPermissionManager */,
 			);
-			path = PermissionManagers;
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		363189782707566E0047C41A /* CameraPermissionManager */ = {
@@ -175,10 +176,19 @@
 			path = PermissionViewFactory;
 			sourceTree = "<group>";
 		};
+		3631898C2707724E0047C41A /* PermissionLocalizables */ = {
+			isa = PBXGroup;
+			children = (
+				3631898D270772630047C41A /* PermissionLocalizables.swift */,
+			);
+			path = PermissionLocalizables;
+			sourceTree = "<group>";
+		};
 		3639CD1C2704E7B80061847A /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
 				3639CD1D2704E7CB0061847A /* UIView+Extentions.swift */,
+				3631898A270771130047C41A /* String+Extensions.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -288,6 +298,7 @@
 				36A9FC9F2703313E008CA2E2 /* LaunchScreen.storyboard */,
 				36A9FCA22703313E008CA2E2 /* Info.plist */,
 				36A9FC9A2703313E008CA2E2 /* AppPermissions.xcdatamodeld */,
+				3631898627076FBA0047C41A /* Localizable.strings */,
 			);
 			path = AppPermissions;
 			sourceTree = "<group>";
@@ -312,10 +323,10 @@
 		36A9FCCD27036567008CA2E2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				368E299927063CA800ED8CFB /* PermissionComponents */,
 				36A9FCCE2703658C008CA2E2 /* ActionButtonComponent */,
 				368E298F270603C100ED8CFB /* ActionModuleComponent */,
 				368E299427061C0B00ED8CFB /* LabelPackComponent */,
+				368E299927063CA800ED8CFB /* PermissionComponents */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -344,6 +355,7 @@
 		36A9FCD5270390A3008CA2E2 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				3631898C2707724E0047C41A /* PermissionLocalizables */,
 				368E29A62706514A00ED8CFB /* AssetHelpers */,
 				3639CD1C2704E7B80061847A /* Extentions */,
 				36A9FCD6270390AD008CA2E2 /* FontManagers */,
@@ -445,6 +457,7 @@
 			knownRegions = (
 				en,
 				Base,
+				tr,
 			);
 			mainGroup = 36A9FC852703313E008CA2E2;
 			productRefGroup = 36A9FC8F2703313E008CA2E2 /* Products */;
@@ -464,6 +477,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36A9FCA12703313E008CA2E2 /* LaunchScreen.storyboard in Resources */,
+				3631898427076FBA0047C41A /* Localizable.strings in Resources */,
 				36A9FC9E2703313E008CA2E2 /* Assets.xcassets in Resources */,
 				36A9FC992703313E008CA2E2 /* Main.storyboard in Resources */,
 			);
@@ -494,10 +508,12 @@
 				363189752707515C0047C41A /* PermissionManagerProtocol.swift in Sources */,
 				36A9FCE027039FCD008CA2E2 /* ActionButtonType.swift in Sources */,
 				36A9FC9C2703313E008CA2E2 /* AppPermissions.xcdatamodeld in Sources */,
+				3631898E270772630047C41A /* PermissionLocalizables.swift in Sources */,
 				3631897A2707567E0047C41A /* CameraPermissionManager.swift in Sources */,
 				368E299627061C4800ED8CFB /* LabelComponent.swift in Sources */,
 				368E29A82706515A00ED8CFB /* PermissionImages.swift in Sources */,
 				36A9FCDE27039FC5008CA2E2 /* ActionButtonTheme.swift in Sources */,
+				3631898B270771130047C41A /* String+Extensions.swift in Sources */,
 				368E29932706046700ED8CFB /* ActionModuleData.swift in Sources */,
 				36A9FCDA27039167008CA2E2 /* GenericValueProtocol.swift in Sources */,
 				363189772707552E0047C41A /* PermissionViewBuilder.swift in Sources */,
@@ -553,10 +569,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		3631898627076FBA0047C41A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3631898527076FBA0047C41A /* en */,
+				3631898927076FE20047C41A /* tr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		36A9FC972703313E008CA2E2 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				36A9FC982703313E008CA2E2 /* Base */,
+				3631898727076FE20047C41A /* tr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -565,6 +591,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				36A9FCA02703313E008CA2E2 /* Base */,
+				3631898827076FE20047C41A /* tr */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -576,6 +603,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -637,6 +665,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

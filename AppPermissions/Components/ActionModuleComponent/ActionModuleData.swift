@@ -13,8 +13,8 @@ class ActionModuleData {
     private(set) var positiveButtonData: ActionButtonData
 
     init(negativeButtonData: ActionButtonData, positiveButtonData: ActionButtonData) {
-        
         self.negativeButtonData = negativeButtonData
         self.positiveButtonData = positiveButtonData
     }
 }
+

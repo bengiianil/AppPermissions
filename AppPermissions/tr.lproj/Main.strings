@@ -1,0 +1,12 @@
+
+/* Class = "UIButton"; configuration.title = "CAMERA"; ObjectID = "ESr-73-9ww"; */
+"ESr-73-9ww.configuration.title" = "CAMERA";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ESr-73-9ww"; */
+"ESr-73-9ww.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "PHOTOS"; ObjectID = "K99-2V-SAV"; */
+"K99-2V-SAV.configuration.title" = "PHOTOS";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "K99-2V-SAV"; */
+"K99-2V-SAV.normalTitle" = "Button";
