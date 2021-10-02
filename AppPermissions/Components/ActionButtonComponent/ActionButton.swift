@@ -146,7 +146,6 @@ extension ActionButton: UIGestureRecognizerDelegate {
         startTappedAnimation { finish in
             
             if finish {
-                
                 self.isUserInteractionEnabled = true
                 self.delegate?.actionButtonPressed()
                 self.pressedButtonAction()

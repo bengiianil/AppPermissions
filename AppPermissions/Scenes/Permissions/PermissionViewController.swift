@@ -7,22 +7,26 @@
 
 import UIKit
 
-class PermissionViewController: UIViewController {
+class PermissionViewController: BaseViewController<PermissionViewModel> {
 
-    private var viewModel: PermissionViewModel!
     
     private var permissionMainView: PermissionMainView!
     // public var permissionMainViewData: PermissionMainViewData!
-    
-    convenience init(viewModel: PermissionViewModel) {
-        self.init()
-        self.viewModel = viewModel
-    }
+    // private var viewModel: PermissionViewModel!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func prepareViewControllerConfiguraitons() {
+        //  super.prepareViewControllerConfiguraitons()
         addPermissionMainView()
+        subscribeViewModelListeners()
     }
+    
+    /**
+     override func viewDidLoad() {
+         super.viewDidLoad()
+         addPermissionMainView()
+         subscribeViewModelListeners()
+     }
+     */
     
     func addPermissionMainView() {
         
@@ -41,10 +45,15 @@ class PermissionViewController: UIViewController {
         ])
     }
     
+    private func subscribeViewModelListeners() {
+        viewModel.listenManagerAction{ [weak self] in
+            self?.dismiss(animated: true, completion: nil)
+        }
+    }
+    
     /**
     private func getPermissionMainViewData() -> PermissionMainViewData {
         return PermissionMainViewData(image: PermissionImages.camera.value, labelData: LabelComponentData(title: "Camera Permission", subtitle: "Would you please give permission to access your camera."), actionModuleData: ActionModuleData(negativeButtonData: ActionButtonData(buttonText: "Not Now", buttonType: .outlined(.smooth)), positiveButtonData: ActionButtonData(buttonText: "OK", buttonType: .filled(.smooth))))
     }
     */
 }
-//

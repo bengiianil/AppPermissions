@@ -20,13 +20,11 @@ class ActionButtonData{
     private(set) var actionButtonListener: VoidCompletionBlock?
     
     init(buttonText: String, buttonType: ActionButtonType){
-        
         self.buttonText = buttonText
         self.buttonType = buttonType
     }
     
     func setActionButtonListener(by value: VoidCompletionBlock?) -> Self {
-         
         actionButtonListener = value
         return self
     }

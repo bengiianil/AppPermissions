@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		362EE0482708BC39008CEE4C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 362EE0472708BC39008CEE4C /* BaseViewController.swift */; };
 		36318973270750380047C41A /* PermissionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36318972270750380047C41A /* PermissionViewModel.swift */; };
 		363189752707515C0047C41A /* PermissionManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363189742707515C0047C41A /* PermissionManagerProtocol.swift */; };
 		363189772707552E0047C41A /* PermissionViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363189762707552E0047C41A /* PermissionViewBuilder.swift */; };
@@ -63,6 +64,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		362EE0472708BC39008CEE4C /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		36318972270750380047C41A /* PermissionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionViewModel.swift; sourceTree = "<group>"; };
 		363189742707515C0047C41A /* PermissionManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionManagerProtocol.swift; sourceTree = "<group>"; };
 		363189762707552E0047C41A /* PermissionViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionViewBuilder.swift; sourceTree = "<group>"; };
@@ -346,8 +348,9 @@
 			isa = PBXGroup;
 			children = (
 				36A9FCD327037EDA008CA2E2 /* BaseView.swift */,
-				36A9FCD927039167008CA2E2 /* GenericValueProtocol.swift */,
+				362EE0472708BC39008CEE4C /* BaseViewController.swift */,
 				3639CD1A2704CDA30061847A /* GenericBaseView.swift */,
+				36A9FCD927039167008CA2E2 /* GenericValueProtocol.swift */,
 			);
 			path = BaseComponents;
 			sourceTree = "<group>";
@@ -509,6 +512,7 @@
 				36A9FCE027039FCD008CA2E2 /* ActionButtonType.swift in Sources */,
 				36A9FC9C2703313E008CA2E2 /* AppPermissions.xcdatamodeld in Sources */,
 				3631898E270772630047C41A /* PermissionLocalizables.swift in Sources */,
+				362EE0482708BC39008CEE4C /* BaseViewController.swift in Sources */,
 				3631897A2707567E0047C41A /* CameraPermissionManager.swift in Sources */,
 				368E299627061C4800ED8CFB /* LabelComponent.swift in Sources */,
 				368E29A82706515A00ED8CFB /* PermissionImages.swift in Sources */,

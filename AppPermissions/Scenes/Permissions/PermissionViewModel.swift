@@ -10,9 +10,14 @@ import Foundation
 class PermissionViewModel {
     
     private let manager: PermissionManagerProtocol
+    private var permissionViewDismissActionBlock: VoidCompletionBlock?
     
     init(manager: PermissionManagerProtocol) {
         self.manager = manager
+    }
+    
+    func listenManagerAction(with completion: @escaping VoidCompletionBlock) {
+        permissionViewDismissActionBlock = completion
     }
     
     func getPermissionMainViewData() -> PermissionMainViewData {
@@ -21,6 +26,9 @@ class PermissionViewModel {
     
     lazy var negativeListenerHandler: VoidCompletionBlock = { [weak self] in
         print("Negative Pressed.")
+        
+        // permissionViewDismissActionBlock is fired, we need self because its into the closure
+        self?.permissionViewDismissActionBlock?()
     }
     
     lazy var positiveListenerHandler: VoidCompletionBlock = { [weak self] in
